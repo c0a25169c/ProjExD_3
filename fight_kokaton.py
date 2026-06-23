@@ -216,7 +216,7 @@ def main():
         tmr += 1
         clock.tick(50)
 
-  # 指摘ミス
+   # 指摘ミス
 if __name__ == "__main__":
     pg.init()
     main()
