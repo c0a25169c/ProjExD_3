@@ -204,7 +204,10 @@ def main():
         bird.update(key_lst, screen)
         for beam in beams:
             beam.update(screen)
-        for bomb in bombs:
+        for bomb in bombs: 
+            speed = 1 + score.score * 0.3
+            bomb.vx = (5 if bomb.vx > 0 else -5) * speed
+            bomb.vy = (5 if bomb.vy > 0 else -5) * speed
             bomb.update(screen)
 
         beams = [beam for beam in beams if check_bound(beam.rct) == (True, True)]
@@ -219,3 +222,7 @@ if __name__ == "__main__":
     main()
     pg.quit()
     sys.exit()
+
+
+
+    
